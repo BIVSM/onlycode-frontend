@@ -1,0 +1,33 @@
+.block-btn {
+  padding:        10px 30px;
+  font-size:      16px;
+  text-transform: uppercase;
+  color:          var(--white2);
+  background:     var(--purple);
+  border: none;
+  border-radius: 8px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  word-wrap: normal;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.block-btn:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  top: 0;
+  bottom: 0;
+  background: var(--blue);
+  z-index: -1;
+  transition-duration: var(--fast-transition-time);
+}
+
+.block-btn:hover:before {right:0;left:0;}
+
+.block-btn > p {
+  z-index: 3;
+}

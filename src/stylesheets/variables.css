@@ -16,13 +16,15 @@
 }
 
 :root { /* colors */
-  --black:  #000000;
-  --black2: #101416;
-  --blue1:  #121721;
-  --white:  #ffffff;
-  --white2: #fefefe;
-  --purple: #7d33ff;
-  --gray:   #838383;
+  --black:    #000000;
+  --black2:   #101416;
+  --blue1:    #121721;
+  --white:    #ffffff;
+  --white2:   #fefefe;
+  --purple:   #7d33ff;
+  --blue:     #fa2484;
+  --gray:     #838383;
+  --gray1:    #bfbfbf;
   --white-40: #FFFFFF40;
 }
 
