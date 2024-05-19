@@ -10,10 +10,6 @@
   width:   0;
 }
 
-p {
-  font-family: var(--ff-inter);
-}
-
 html, body {
   width:           100vw;
   min-height:      100vh;
@@ -21,9 +17,14 @@ html, body {
   overflow-y:      hidden;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
-  background-color: var(--background-color);
-  color: var(--text-color);
+  background-color: var(--black2);
+  color: var(--white);
+  font-family: var(--ff-inter), sans-serif;
 }
 
 input, button, select {

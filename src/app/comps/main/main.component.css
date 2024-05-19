@@ -1,0 +1,15 @@
+.container {
+  width:          100vw;
+  height:         fit-content;
+  display:        flex;
+  flex-direction: column;
+}
+
+.top-bar {
+  height: var(--top-bar-height);
+  width: 100vw;
+}
+
+.content {
+  width: 100vw;
+}

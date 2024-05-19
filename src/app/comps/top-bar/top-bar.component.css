@@ -1,0 +1,56 @@
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 10px 20px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+}
+
+.logo {
+  height: 100%;
+}
+
+.logo-img {
+  height: 50px;
+}
+
+.routes {
+  width: 100%;
+  height: 100%;
+  gap: 20px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.buttons {
+  height: 100%;
+  gap: 20px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+}
+
+.btn {
+  width: fit-content;
+  height: fit-content;
+  padding: 10px 30px;
+  border-radius: 8px;
+  border: none;
+}
+
+.login {
+  background: transparent;
+}
+
+.register {
+  background: var(--purple);
+}

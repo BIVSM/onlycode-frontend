@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="logo">
+    <a routerLink="">
+      <img class="logo-img" src="assets/logo.svg" alt="">
+    </a>
+  </div>
+  <div class="routes">
+    @for (route of routes; track route) {
+      <a [routerLink]="route.url">
+        {{ route.name }}
+      </a>
+    }
+  </div>
+  <div class="buttons">
+    <button class="btn login">login</button>
+    <button class="btn register">register</button>
+  </div>
+</div>

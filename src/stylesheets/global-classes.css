@@ -3,3 +3,69 @@
 .fw-600 { font-weight: 600; }
 
 .fw-500 { font-weight: 500; }
+
+.ff-inter { font-family: var(--ff-inter), sans-serif; }
+
+.ff-rubik { font-family: var(--ff-rubik), sans-serif; }
+
+.ff-noto { font-family: var(--ff-noto), sans-serif; }
+
+.ff-kharkiv { font-family: var(--ff-kharkiv), sans-serif; }
+
+.ff-potra { font-family: var(--ff-potra), sans-serif; }
+
+.ff-grotesque { font-family: var(--ff-grotesque), sans-serif; }
+
+.font-size-xxxlarge {
+  font-size: clamp(4.5rem, 7vw, 7.5rem);
+
+  @media screen and (max-width: 991px) {
+    font-size: 7vw;
+  }
+  @media screen and (max-width: 470px) {
+    font-size: 9.25vw;
+  }
+}
+
+.font-size-xxlarge {
+  font-size: clamp(3rem, 5vw, 5rem);
+
+  @media screen and (max-width: 991px) {
+    font-size: 3rem;
+  }
+  @media screen and (max-width: 470px) {
+    font-size: 2rem;
+  }
+}
+
+.font-size-xlarge {
+  font-size: clamp(2.5rem, 3.5vw, 3rem);
+
+  @media screen and (max-width: 991px) {
+    font-size: 2.5rem;
+  }
+  @media screen and (max-width: 470px) {
+    font-size: 1.75rem;
+  }
+}
+
+.font-size-large {
+  font-size: clamp(1.5rem, 2vw, 2.5rem);
+
+  @media screen and (max-width: 991px) {
+    font-size: 2rem;
+  }
+  @media screen and (max-width: 470px) {
+    font-size: 1.5rem;
+  }
+}
+
+.font-size-medium {
+  font-size: 1.5rem;
+
+  @media screen and (max-width: 470px) {
+    font-size: 1rem;
+  }
+}
+
+.font-size-regular { font-size: 1rem; }
