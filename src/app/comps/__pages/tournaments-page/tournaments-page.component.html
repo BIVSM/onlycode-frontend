@@ -1,6 +1,11 @@
-
-
-<div class="container">
-  <div class="content"></div>
-  <div class="nav"></div>
+<div class="upcoming-container">
+  <div class="header">
+    <p class="font-size-xlarge ff-potra">Code games</p>
+    <p class="font-size-xlarge ff-grotesque">Learn new</p>
+  </div>
+  <div class="content">
+    @for (card of upcoming_tournaments; track upcoming_tournaments) {
+      <app-tournament-card [tournament]="card"></app-tournament-card>
+    }
+  </div>
 </div>

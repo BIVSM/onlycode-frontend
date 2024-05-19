@@ -5,15 +5,28 @@ import {TournamentsPageComponent} from "./comps/__pages/tournaments-page/tournam
 import {SandboxPageComponent} from "./comps/__pages/sandbox-page/sandbox-page.component";
 import {RegisterPageComponent} from "./comps/__pages/_PROFILE/register-page/register-page.component";
 import {ProfilePageComponent} from "./comps/__pages/_PROFILE/profile-page/profile-page.component";
-import {SolutionPageComponent} from "./comps/__pages/solution-page/solution-page.component";
 import {CreatePageComponent} from "./comps/__pages/_CREATE/create-page/create-page.component";
+import {
+  TournamentMainPageComponent
+} from "./comps/__pages/_TOURNAMENT/tournament-main-page/tournament-main-page.component";
+import {TournamentUploadComponent} from "./comps/__pages/_TOURNAMENT/tournament-upload/tournament-upload.component";
+import {TournamentAboutComponent} from "./comps/__pages/_TOURNAMENT/tournament-about/tournament-about.component";
 
 export const routes: Routes = [
   {path: '', component: MainPageComponent},
 
   {path: 'sandboxes', component: SandboxPageComponent},
+
   {path: 'tournaments', component: TournamentsPageComponent},
-  {path: 'tournament/upload/:id', component: SolutionPageComponent},
+  {
+    path: 'tournament/:id', component: TournamentMainPageComponent,
+    children: [
+      {path: '', redirectTo: 'about', pathMatch: 'prefix'},
+      {path: 'about', component: TournamentAboutComponent},
+      {path: 'upload', component: TournamentUploadComponent},
+      {path: '**', redirectTo: 'about', pathMatch: 'full'},
+    ]
+  },
 
   {path: 'create', component: CreatePageComponent},
   {path: 'create/game', component: CreatePageComponent},

@@ -16,16 +16,19 @@
 }
 
 :root { /* colors */
-  --black:   #000000;
+  --black:  #000000;
   --black2: #101416;
-  --white:   #ffffff;
-  --white2:   #fefefe;
-  --purple:  #7d33ff;
+  --blue1:  #121721;
+  --white:  #ffffff;
+  --white2: #fefefe;
+  --purple: #7d33ff;
+  --gray:   #838383;
+  --white-40: #FFFFFF40;
 }
 
 :root { /* sizes */
   --top-bar-height:  70px;
-  --right-bar-width: 300px;
+  --tournament-right-bar-width: 70px;
 }
 
 :root { /* transition duration times */

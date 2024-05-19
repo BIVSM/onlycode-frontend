@@ -1,0 +1,9 @@
+<div class="container">
+  @for (route of routes; track routes) {
+    <a [routerLink]="route.url">
+      <div class="link" [class.active-link]="getUrl()==route.name">
+        <img [src]="'assets/tournament/right-bar-images/'+route.image" alt="">
+      </div>
+    </a>
+  }
+</div>

@@ -1,0 +1,14 @@
+<div class="card">
+  <div class="image">
+    <img [src]="tournament.image">
+  </div>
+  <div class="card-name">
+    <p class="font-size-medium ff-inter">{{tournament.name}}</p>
+  </div>
+  <div class="date">
+    <p>{{tournament.finish_registration_date}}</p>
+  </div>
+  <div class="buttons">
+    <button class="btn" [routerLink]="'/tournament/'+tournament.id+'/main'">Join</button>
+  </div>
+</div>
