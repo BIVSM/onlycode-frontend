@@ -69,3 +69,19 @@
 }
 
 .font-size-regular { font-size: 1rem; }
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.just-center { justify-content: center; justify-items: center; }
+
+.align-center { align-items: center; align-content: center; }
+
+.gap-20 { gap: 20px; }
