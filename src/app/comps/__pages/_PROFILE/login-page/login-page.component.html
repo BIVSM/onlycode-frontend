@@ -4,16 +4,16 @@
     <p class="header font-size-large fw-600">Log in to OnlyCode</p>
     <div class="inputs-container">
       <label class="label">
-        <input placeholder="" class="input" type="email" autocomplete="off" maxlength="30" required spellcheck="false" name="phone" inputmode="tel" >
-        <span class="span">Email</span>
+        <input [(ngModel)]="username" placeholder="" class="input" type="email" autocomplete="off" maxlength="30" required spellcheck="false" name="phone" inputmode="tel" >
+        <span class="span">Username</span>
       </label>
 
       <label class="label">
-        <input placeholder="" class="input" type="password" autocomplete="off" maxlength="30" required spellcheck="false" name="phone" inputmode="tel" >
+        <input [(ngModel)]="password" placeholder="" class="input" type="password" autocomplete="off" maxlength="30" required spellcheck="false" name="phone" inputmode="tel" >
         <span class="span">Password</span>
       </label>
     </div>
-    <button class="btn">log in</button>
+    <button (click)="login()" class="btn">log in</button>
   </div>
 
 </div>
