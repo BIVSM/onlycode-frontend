@@ -28,7 +28,7 @@
   border-top-left-radius: 16px;
 
   @media screen and (min-width: 900px) {
-    calc(100vw - var(--tournament-right-bar-width))
+    width: calc(100vw - var(--tournament-right-bar-width));
   }
 }
 

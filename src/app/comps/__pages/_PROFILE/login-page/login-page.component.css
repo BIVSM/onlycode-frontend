@@ -1,0 +1,114 @@
+.container {
+  width: 100vw;
+  height: calc(100vh - var(--top-bar-height));
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding: 0 10px;
+}
+
+.content {
+  max-width: 100%;
+  width: 400px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+
+.header {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.inputs-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  gap: 20px;
+}
+
+.input {
+  width:          100%;
+  height:         var(--input-height);
+  display:        flex;
+  flex-direction: row;
+  align-items:    center;
+  align-content:  center;
+  background:     var(--purple);
+  border-radius:  8px;
+  padding:        19px 16px 0;
+  outline:        none;
+  border:         none;
+  caret-color:    var(--white);
+  color: var(--black);
+}
+
+.invalid {
+  color:      red !important;
+  box-shadow: inset 0 0 0 1px red !important;
+}
+
+.label {
+  position: relative;
+  width:    100%;
+}
+
+.span {
+  position:            absolute;
+  line-height:         100%;
+  left:                16px;
+  top:                 20px;
+  max-width:           calc(100% - 32px);
+  color:               var(--white);
+  text-overflow:       ellipsis;
+  overflow:            hidden;
+  white-space:         nowrap;
+  pointer-events:      none;
+  transition:          all .25s;
+  transform-origin:    left;
+  transition-property: transform, color, font-size;
+}
+
+.input:focus, .input:not(:placeholder-shown) {
+  background:         var(--white);
+  box-shadow:         inset 0 0 0 1px var(--black);
+  -webkit-appearance: none;
+}
+
+.input:focus ~ .span, .input:not(:placeholder-shown) ~ .span {
+  transform: translateY(-10px) scale(.87);
+  color:     var(--black);
+}
+
+:host {
+  --input-height:    56px;
+}
+
+.btn {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background: var(--white);
+  color: var(--black);
+  padding: 10px;
+  border-radius: 100px;
+  margin-top: 20px;
+  transition-duration: var(--fast-transition-time);
+  border: none;
+}
+
+.btn:hover {
+  filter: brightness(.8);
+}
+
+.btn:active {
+  filter: brightness(.6);
+}

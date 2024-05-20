@@ -1,6 +1,39 @@
 <div class="flex-row full gap-30">
-  <div class="block"></div>
-  <div class="block" style="width: 100%;">
-    <div class="editor" ui-ace="{ mode: 'javascript', theme: 'monokai',onLoad:load }" ng-model="code"></div>
+  <div class="block">
+    <p class="block-header">statement</p>
+    <div class="block-content" style="margin-top: 20px;">
+      <p class="block-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua. Tellus in metus vulputate eu scelerisque felis. Felis donec et
+        odio pellentesque diam volutpat commodo sed egestas. Et sollicitudin ac orci phasellus egestas. Lacus
+        laoreet non curabitur gravida arcu ac tortor dignissim. Enim lobortis scelerisque fermentum dui faucibus in.
+        Eu non diam phasellus vestibulum lorem sed risus. Pretium nibh ipsum consequat nisl vel. Turpis in eu mi
+        bibendum neque egestas congue quisque egestas. At volutpat diam ut venenatis tellus in metus vulputate. In
+        arcu cursus euismod quis viverra nibh cras. Mauris pellentesque pulvinar pellentesque habitant morbi. Cursus
+        metus aliquam eleifend mi in nulla posuere sollicitudin aliquam. In tellus integer feugiat scelerisque
+        varius. Proin sagittis nisl rhoncus mattis. Sem viverra aliquet eget sit amet tellus cras adipiscing. Mus
+        mauris vitae ultricies leo integer. Accumsan lacus vel facilisis volutpat. Cursus turpis massa tincidunt dui
+        ut ornare lectus sit.
+        <br><br>
+        Lorem ipsum dolor sit amet consectetur adipiscing. Nisl rhoncus mattis rhoncus urna neque. Massa tempor nec
+        feugiat nisl. Cursus vitae congue mauris rhoncus aenean vel elit. Molestie nunc non blandit massa enim nec
+        dui. Sit amet nulla facilisi morbi tempus. Nulla posuere sollicitudin aliquam ultrices sagittis. Lacus vel
+        facilisis volutpat est velit egestas dui id ornare. Tristique nulla aliquet enim tortor at. Bibendum neque
+        egestas congue quisque egestas diam in arcu. Vel quam elementum pulvinar etiam. Libero enim sed faucibus
+        turpis in. Eu nisl nunc mi ipsum faucibus vitae aliquet nec ullamcorper. Et odio pellentesque diam volutpat
+        commodo sed. Eu facilisis sed odio morbi quis commodo odio aenean sed. A iaculis at erat pellentesque
+        adipiscing commodo elit at imperdiet. Eget dolor morbi non arcu risus. Viverra justo nec ultrices dui sapien
+        eget mi proin. Sed arcu non odio euismod lacinia. Aenean sed adipiscing diam donec adipiscing tristique.
+      </p>
+    </div>
+  </div>
+  <div class="block flex-col" style="width: 100%; height: calc(100vh - var(--top-bar-height) - 70px); padding: 0;">
+    <div class="choose-lang">
+        <select (change)="changeLanguage()" #selectElement>
+          <option>Javascript</option>
+          <option>C++</option>
+          <option>Python</option>
+        </select>
+    </div>
+    <ngx-monaco-editor class="editor" [options]="EDITOR_OPTIONS[MonacoIndex]" [(ngModel)]="CODE_TEMPLATES[MonacoIndex]"></ngx-monaco-editor>
   </div>
 </div>

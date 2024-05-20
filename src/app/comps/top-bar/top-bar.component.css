@@ -45,6 +45,33 @@
   padding: 10px 30px;
   border-radius: 8px;
   border: none;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.btn > p { z-index: 3; }
+
+.btn:before {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  right: 50%;
+  background: var(--purple);
+  transition-duration: var(--fast-transition-time);
+}
+
+.register:before {
+  background: var(--blue);
+}
+
+.btn:hover:before {
+  left:0;
+  right:0;
 }
 
 .login {
