@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {FormsModule} from "@angular/forms";
 import {AuthService} from "../../../../services/api/auth.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-login-page',
@@ -17,10 +18,17 @@ export class LoginPageComponent {
 
   constructor(
     private authService: AuthService,
+    private router: Router,
   ) {
   }
 
   login() {
-    this.authService.login({username: this.username, password: this.password})
+    this.authService.login({username: this.username, password: this.password}).subscribe(
+      resp => {
+        this.router.navigate(['']).then();
+      }, error => {
+
+      }
+    );
   }
 }
