@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {FormsModule} from "@angular/forms";
 import {AuthService} from "../../../../services/api/auth.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-register-page',
@@ -19,6 +20,7 @@ export class RegisterPageComponent {
 
   constructor(
     private authService: AuthService,
+    private router: Router,
   ) {
   }
 
@@ -26,6 +28,7 @@ export class RegisterPageComponent {
     if (this.password2 == this.password1)
       this.authService.register({username: this.username, email: this.email, password1: this.password1, password2: this.password2}).subscribe(
         resp => {
+          this.router.navigate(['']).then();
           console.log(resp);
         }, error => {
           console.log(error);

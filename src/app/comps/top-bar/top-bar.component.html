@@ -12,7 +12,11 @@
     }
   </div>
   <div class="buttons">
-    <a routerLink="login"><button class="btn login"><p>login</p></button></a>
-    <a routerLink="register"><button class="btn register"><p>register</p></button></a>
+    @if (user === undefined) {
+      <a routerLink="login"><button class="btn login"><p>login</p></button></a>
+      <a routerLink="register"><button class="btn register"><p>register</p></button></a>
+    } @else {
+      <a routerLink="profile"><button class="btn register"><p>profile</p></button></a>
+    }
   </div>
 </div>

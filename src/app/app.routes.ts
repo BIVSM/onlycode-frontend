@@ -11,13 +11,15 @@ import {
 } from "./comps/__pages/_TOURNAMENT/tournament-main-page/tournament-main-page.component";
 import {TournamentUploadComponent} from "./comps/__pages/_TOURNAMENT/tournament-upload/tournament-upload.component";
 import {TournamentAboutComponent} from "./comps/__pages/_TOURNAMENT/tournament-about/tournament-about.component";
+import {AuthGuard} from "./guards/auth.guard";
+import {ProfileGuard} from "./guards/profile.guard";
 
 export const routes: Routes = [
   {path: '', component: MainPageComponent},
 
-  {path: 'sandboxes', component: SandboxPageComponent},
+  {path: 'sandboxes', component: SandboxPageComponent, canActivate: [AuthGuard]},
 
-  {path: 'tournaments', component: TournamentsPageComponent},
+  {path: 'tournaments', component: TournamentsPageComponent, canActivate: [AuthGuard]},
   {
     path: 'tournament/:id', component: TournamentMainPageComponent,
     children: [
@@ -28,11 +30,11 @@ export const routes: Routes = [
     ]
   },
 
-  {path: 'create', component: CreatePageComponent},
-  {path: 'create/game', component: CreatePageComponent},
-  {path: 'create/tournament', component: CreatePageComponent},
+  {path: 'create', component: CreatePageComponent, canActivate: [AuthGuard]},
+  {path: 'create/game', component: CreatePageComponent, canActivate: [AuthGuard]},
+  {path: 'create/tournament', component: CreatePageComponent, canActivate: [AuthGuard]},
 
-  {path: 'login', component: LoginPageComponent},
-  {path: 'register', component: RegisterPageComponent},
-  {path: 'profile', component: ProfilePageComponent},
+  {path: 'login', component: LoginPageComponent, canActivate: [ProfileGuard]},
+  {path: 'register', component: RegisterPageComponent, canActivate: [ProfileGuard]},
+  {path: 'profile', component: ProfilePageComponent, canActivate: [AuthGuard]},
 ];
