@@ -1,12 +1,38 @@
 import { Component } from '@angular/core';
+import {FormsModule} from "@angular/forms";
+import {AuthService} from "../../../../services/api/auth.service";
 
 @Component({
   selector: 'app-register-page',
   standalone: true,
-  imports: [],
+  imports: [
+    FormsModule
+  ],
   templateUrl: './register-page.component.html',
   styleUrls: ['./register-page.component.css', '../login-page/login-page.component.css']
 })
 export class RegisterPageComponent {
+  public username: string = '';
+  public email: string = '';
+  public password1: string = '';
+  public password2: string = '';
 
+  constructor(
+    private authService: AuthService,
+  ) {
+  }
+
+  register() {
+    if (this.password2 == this.password1)
+      this.authService.register({username: this.username, email: this.email, password1: this.password1, password2: this.password2}).subscribe(
+        resp => {
+          console.log(resp);
+        }, error => {
+          console.log(error);
+        }
+      );
+    else {
+      console.log('error');
+    }
+  }
 }

@@ -46,7 +46,7 @@
   padding:        19px 16px 0;
   outline:        none;
   border:         none;
-  caret-color:    var(--white);
+  caret-color:    var(--black);
   color: var(--black);
 }
 
